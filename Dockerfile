@@ -8,7 +8,7 @@ RUN pip install --quiet \
 RUN pip install --quiet \
     gensim spacy nltk textblob stanfordcorenlp wordcloud
 
-RUN conda install --quiet --yes basemap
+RUN conda install --quiet --yes basemap pyproj proj4
 
 RUN fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
